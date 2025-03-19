@@ -28,9 +28,9 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci  # Faster & more reliable
 
-      - name: Build Project
+      - name: Build Project with Vite
         run: npm run build
 
       - name: Deploy to Azure Static Web Apps
@@ -38,11 +38,11 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PURPLE_GRASS_02E88C400 }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
+          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (PR comments)
           action: "upload"
-          app_location: "./portfolio" # App source code path
-          api_location: "" # API source code path - optional
-          output_location: "dist" # ✅ Corrected path
+          app_location: "./portfolio"  # ✅ App source code location
+          api_location: ""  # Keep empty if no API
+          output_location: "portfolio/dist"  # ✅ Correct for Vite builds
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
