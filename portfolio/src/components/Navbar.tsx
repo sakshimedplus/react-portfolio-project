@@ -12,7 +12,9 @@ const Navbar = () => {
         <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
         <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
         <li><Link to="/project" onClick={() => setIsOpen(false)}>Projects</Link></li>
+        <li><Link to="/resume" onClick={() => setIsOpen(false)}>Resume</Link></li>
         <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+        
       </ul>
 
       <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>

@@ -112,4 +112,18 @@
       width: 90%;
     }
   }
-  
+  @layer base {
+    :root {
+      --bg-color: white;
+      --text-color: black;
+    }
+  .dark {
+    --bg-color: #1a202c;
+    --text-color: white;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
