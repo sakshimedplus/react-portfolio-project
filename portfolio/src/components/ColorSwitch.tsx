@@ -3,15 +3,9 @@ import { useEffect, useState } from "react";
 
 
 const ToggleSwitch = () => {
-  // const [isOn, setIsOn] = useState(false);
 
-  // const handleToggle = () => {
-  //   setIsOn((prev) => !prev);
-    
-  // };
-  
   const [darkMode, setDarkMode] = useState(false);
- var Mode="Dark Mode";
+  //  var Mode="Dark Mode";
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -26,11 +20,22 @@ const ToggleSwitch = () => {
 
       <FormControlLabel
         value="Light"
-        control={<Switch color="secondary"  /> } 
+        control={<Switch color="default"  /> } 
         onChange={() => setDarkMode(!darkMode)}
-        label={darkMode?"Light Mode":"Dark Mode"}
-        labelPlacement={darkMode?"end":"start"}
+   
+
+        label={
+          <img
+            src={darkMode ? "../../src/assets/favicons/favicon-32x32.png" : "../../src/assets/favicons/night-favicon-32x32.png" }
+            alt={darkMode ? "Light Mode" : "Dark Mode"}
+             width="18"
+             height="18"
+            // style={{ marginLeft: darkMode ? "8px" : "0", marginRight: darkMode ? "0" : "8px" }}
+          />
+        }
+        labelPlacement={darkMode ? "end" : "start"}
       />
+  
     </FormGroup>
   </FormControl>
   );

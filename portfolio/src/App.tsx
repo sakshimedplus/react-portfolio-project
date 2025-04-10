@@ -4,27 +4,17 @@ import Contact from './pages/Contact'
 import Projects from './pages/Projects'
 import AboutMe from './pages/AboutMe'
 import Navbar from './components/Navbar'
-import "./index.css";
-import ColorSwitch from './components/ColorSwitch'
 import MyResume from './pages/MyResume'
 
 
 function App() {
 
   return (
-    <>   <div>
+    <>   
     <Navbar></Navbar>
-    </div ><div   
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "8vh",
-       
-      }}
-    > 
-    <ColorSwitch></ColorSwitch>  </div>
-    <div>
+    <div className="fade-in">
+
+    
     <main className="main-content">
      <Routes>
       < Route path="/" element={ <AboutMe></AboutMe>}/>
@@ -34,11 +24,9 @@ function App() {
       < Route path="/resume" element={ <MyResume />}/>
      </Routes>
     </main>
-
-  
-     
      
      </div> 
+     
    </>
   )
 }
