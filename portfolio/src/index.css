@@ -1,36 +1,80 @@
 /* About Page Styling */
+.about-container-container{
+  background-image: url('../src/assets/images/bblank screen.png');
+  width: 100%; 
+  background-size: 100% 100%;  
+  background-repeat: no-repeat;
+  background-position: center;
+ max-width: 800px;
+  /* background-color: rgb(0, 106, 255); */
+  width: 90%; 
+  height: 290%;
+  margin: 50px auto;
+  padding: 20px;
+}
 .about-container {
-    max-width: 800px;
+    
     margin: 50px auto;
     padding: 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    /* background-color: #6e21b1; */
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: #1a202c; 
+    background-blend-mode: normal;
+ 
   }
   
   .about-title {
     font-size: 2rem;
-    color: #333;
+    /* color: #333; */
     margin-bottom: 15px;
   }
   
   .about-content {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #555;
+    color: #aa61a2;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
   
   .about-image {
+    
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin: 20px 0;
     border: 3px solid #007bff;
+
   }
   
   /* Responsive Design */
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .about-container {
       width: 90%;
       padding: 15px;
@@ -67,7 +111,7 @@
   
   .project-card {
     background: #fff;
-    padding: 50px;
+    padding: 150px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -83,7 +127,7 @@
   
   .project-title {
     font-size: 1.5rem;
-    color: #007bff;
+    color: hsl(211, 27%, 40%);
     margin-bottom: 10px;
   }
   
@@ -107,9 +151,43 @@
   }
   
   /* Responsive Design */
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .projects-container {
       width: 90%;
     }
+    .fade-in {
+      opacity: 0.01;
+      transform: translateY(22px);
+      animation: fadeIn 3s ease-in-out forwards;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 1;
+        transform: translateY();
+      }
+      to {
+        opacity: 1;
+        transform: translateY(240px);
+      }
+    }
   }
+  @layer base {
+    :root {
+      --bg-color: white;
+      --text-color: black;
+    }
+  .dark {
+    --bg-color: #162b59;
+    --text-color: white;
+  }
+}
+
+body {
   
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+

@@ -19,11 +19,16 @@
     list-style: none;
     display: flex;
     gap: 20px;
+ 
   }
   
   .nav-links li {
     display: inline;
+    /* animation-name: navlinkAnimation; */
+    animation-duration: 7s;
   }
+/*   
+ */
   
   .nav-links a {
     text-decoration: none;
@@ -46,7 +51,6 @@
   /* Responsive Navbar */
   @media (max-width: 768px) {
     .nav-links {
-      display: none;
       flex-direction: column;
       background: #222;
       position: absolute;
@@ -65,4 +69,7 @@
       display: block;
     }
   }
-  
+  .dark {
+    --bg-color: #1a202c;
+    --text-color: white;
+  }
