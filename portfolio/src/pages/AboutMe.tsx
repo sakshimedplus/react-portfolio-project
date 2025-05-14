@@ -94,7 +94,7 @@ const AboutMe: React.FC = () => {
         <pre style={styles.text}>{screenText}</pre>
       </div>
       <img
-        src="../src/assets/images/bblank screen.png" 
+        src="../src/assets/images/bblank-screen.png" 
         alt="Keyboard and Mouse on Table"
         style={styles.image}
       />
