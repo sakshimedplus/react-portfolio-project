@@ -5,9 +5,15 @@ import Projects from './pages/Projects'
 import AboutMe from './pages/AboutMe'
 import Navbar from './components/Navbar'
 import MyResume from './pages/MyResume'
+import BotApp from './components/bot'
+import { useState } from 'react'
+
 
 
 function App() {
+
+
+    const [click,clicked]=useState(false);
 
   return (
     <>   
@@ -17,16 +23,33 @@ function App() {
     
     <main className="main-content">
      <Routes>
-      < Route path="/" element={ <AboutMe></AboutMe>}/>
-      < Route path="/contact" element={ < Contact/>}/>
-      < Route path="/project" element={ <  Projects/>}/>
-      < Route path="/about" element={ <AboutMe></AboutMe>}/>
       < Route path="/resume" element={ <MyResume />}/>
      </Routes>
     </main>
      
-     </div> 
+     </div>
+     <section id ="about" style={{
+      backgroundColor:'#aeaca8'
+     }}>
+     <AboutMe></AboutMe>
      
+    </section> 
+    <section id ="project">
+   
+    {!click && (<a href="#project"onClick={() => clicked(true) }>click me</a>)}
+   
+    {click &&  <  Projects/>}
+  
+     
+    </section> 
+    {/* <section id="road">
+      <img src='/src/assets/images/cloud.png' alt='road'/>
+    </section> */}
+    <section id="contact">
+    < Contact/>
+    </section>
+    {/* <section id ="resume"><MyResume /></section> */}
+     <BotApp></BotApp>
    </>
   )
 }
