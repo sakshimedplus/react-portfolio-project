@@ -40,6 +40,7 @@
 
 // export default AboutMe;
 import React, { useEffect, useState } from "react";
+import monitor from '../assets/images/monitor.png';
 
 const AboutMe: React.FC = () => {
   const [screenText, setScreenText] = useState<string>("");
@@ -94,7 +95,7 @@ const AboutMe: React.FC = () => {
         <pre style={styles.text}>{screenText}</pre>
       </div>
       <img
-        src="../src/assets/images/bblank-screen.png" 
+        src={monitor}
         alt="Keyboard and Mouse on Table"
         style={styles.image}
       />
