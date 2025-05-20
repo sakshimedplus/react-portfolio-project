@@ -30,7 +30,7 @@
 
 <div className="resume-corner"></div>
 
-      <button
+      {/* <button
           style={{
             margin: "30px",
             padding: "15px 25px",
@@ -42,7 +42,7 @@
             cursor: "pointer",
           }}
         >Download Resume
-        </button>
+        </button> */}
     </div>
      
     );

@@ -45,7 +45,7 @@ const Projects: React.FC = () => {
   }, []);
 
   return (
-    <div className={`crash-container ${hasCrashed ? "crashed" : ""}`}>
+    <div className={`crash-container ${hasCrashed ? "crashed" : ""}`}><div className="content_container">
       {!hasCrashed && (
         <div className="car">
           <img src={carGif} alt="Moving Car" style={{
@@ -106,6 +106,7 @@ const Projects: React.FC = () => {
     </Box>
     </div>
       )}
+      </div>
     </div>
   );
 };

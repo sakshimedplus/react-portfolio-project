@@ -1,4 +1,7 @@
-import { Routes,Route } from 'react-router-dom'
+// import { Routes,Route } from 'react-router-dom'
+
+
+
 import './App.css'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
@@ -18,7 +21,7 @@ function App() {
   return (
     <>   
     <Navbar></Navbar>
-    <div className="fade-in">
+    {/* <div className="fade-in">
 
     
     <main className="main-content">
@@ -27,7 +30,7 @@ function App() {
      </Routes>
     </main>
      
-     </div>
+     </div> */}
      <section id ="about" style={{
       backgroundColor:'#aeaca8'
      }}>
@@ -48,7 +51,7 @@ function App() {
     <section id="contact">
     < Contact/>
     </section>
-    {/* <section id ="resume"><MyResume /></section> */}
+     <section id ="resume"><MyResume /></section> 
      <BotApp></BotApp>
    </>
   )

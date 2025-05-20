@@ -5,6 +5,9 @@
     height: 100vh;
     overflow: hidden;
   }
+  .content_container{
+    margin:3%;
+  }
   .crash-container::before {
     content: "";
     position: absolute;
@@ -39,6 +42,7 @@
     position: absolute;
     left: 66%;
     top: 75%;
+    
     background-size: contain;   /* or cover */
   background-repeat: repeat;
   background-position: center;
@@ -59,10 +63,9 @@
   .wall {
     position: absolute;
     top: 38%;
-    left: 67%;
-    width: 350px;
-    height: 370px;
-    /* background-color: #444; */
+    left: 65%;
+    width: 23%;
+    height: 47%;
     background: url("../assets/images/building.png")  center/cover no-repeat;
     display: flex;
     align-items: center;

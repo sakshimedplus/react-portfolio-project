@@ -6,7 +6,6 @@
   background-repeat: no-repeat;
   background-position: center;
  max-width: 800px;
-  /* background-color: rgb(0, 106, 255); */
   width: 90%; 
   height: 290%;
   margin: 50px auto;
@@ -17,7 +16,6 @@
     margin: 50px auto;
     padding: 20px;
     text-align: center;
-    /* background-color: #6e21b1; */
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border: #1a202c; 
@@ -27,7 +25,6 @@
   
   .about-title {
     font-size: 2rem;
-    /* color: #333; */
     margin-bottom: 15px;
   }
   
@@ -37,7 +34,9 @@
     color: #aa61a2;
   }
 
-
+.contact-contents{
+  margin:3% ;
+}
 
 
 
